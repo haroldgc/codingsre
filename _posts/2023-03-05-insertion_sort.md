@@ -33,4 +33,4 @@ def insertion_sort(list):
 
 The following example demonstrate steps taken by the algorithm to sort list `[4, 3, 2, 5, 1]`. At every iteration the value at index `i` is shifted to the left of the list until it find its place such that sub list `[0:i-1]` is sorted.
 
-![Insertion sort](https://github.com/haroldgc/codingsre/blob/13111ea9f09ed47e6daeea6dbbdb2f3fbdbefc2e/img/insertion_sort.png)
+![Insertion sort](/assets/img/posts/2023-03-05-insertion_sort.png)
