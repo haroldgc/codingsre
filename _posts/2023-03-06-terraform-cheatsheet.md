@@ -3,7 +3,7 @@ layout: post
 title: Terraform Cheatsheet
 date: 2023-03-06 21:45 +0100
 categories: [Systems, IaC]
-tags: [iac, terraform]     # TAG names should always be lowercase
+tags: [iac, terraform, cheatsheet]     # TAG names should always be lowercase
 ---
 # Frequently used commands
 
