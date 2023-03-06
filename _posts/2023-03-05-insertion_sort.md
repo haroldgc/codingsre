@@ -1,7 +1,7 @@
 ---
 title: Insertion Sort Algorithm
 date: 2023-03-05 19:00:00 +0100
-categories: [Algorithms]
+categories: [Coding, Algorithms]
 tags: [algorithms, python]     # TAG names should always be lowercase
 ---
 

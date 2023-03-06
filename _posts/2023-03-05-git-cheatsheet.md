@@ -2,6 +2,8 @@
 layout: post
 title: GIT Cheatsheet
 date: 2023-03-05 19:37 +0100
+categories: [Coding]
+tags: [coding, git]     # TAG names should always be lowercase
 ---
 
 # GIT command sheet
