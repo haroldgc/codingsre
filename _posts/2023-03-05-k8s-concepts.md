@@ -2,6 +2,7 @@
 layout: post
 title: k8s concepts
 date: 2023-03-05 19:48 +0100
+mermaid: true
 ---
 
 Kubernetes (a.k.a k8s) is a container orchestrator, for automating deployment, management and scaling of applications.
