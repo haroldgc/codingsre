@@ -1,7 +1,9 @@
 ---
 layout: post
-title: k8s concepts
+title: Kubernetes fundamentals
 date: 2023-03-05 19:48 +0100
+categories: [Systems, IaC]
+tags: [kubernetes, k8s, cheatsheet]
 mermaid: true
 ---
 
