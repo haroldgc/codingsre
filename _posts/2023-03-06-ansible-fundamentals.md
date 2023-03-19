@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ansible concepts
+title: Ansible Fundamentals
 date: 2023-03-06 23:06 +0100
 categories: [Systems, IaC]
 tags: [iac, ansible, cheatsheet]  
