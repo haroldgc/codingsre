@@ -29,6 +29,37 @@ It uses a declarative approach in which you define the way you want a system to 
 
 There are two available Puppet distribution: Open Source Puppet, and Puppet Enterprises (PE). Where PE provides a set of features like: PuppetDB built-in, Web UI, RBAC, and others.
 
+# Puppet server arquitecture
+
+The Puppet Server is the central component of the Puppet infrastructure. It is responsible for collecting system information from Puppet agents, and for distributing configuration information to the agents.
+
+The services that Puppet Server provides are:
+
+* *Puppet Server* : Certificate of authority and catalog compiler.
+* *Code manager* : Deploys code from version control to the primary server.
+* *Activity service* : Logs changes to RBAC entities, such as users, directory groups, and user roles.
+* *Classifier service* : Provides agent node classification.
+* *RBAC service* : Manages user access.
+* *PuppetDB service* : Collects data generated throughout your Puppet infrastructure.
+* *Orchestrator service* : Runs actions remotely against target agent nodes via the PXP agent service.
+
+And the services running on the Puppet agents are:
+
+* *Puppet agent service* : Runs on port **8140** and is used to send information to the Puppet Server. The Puppet agent service is also used to receive information from the Puppet Server.
+
+* *Puppet execution service* : Maintains a persistent connection to the primary server over TCP port **8142** and is used to run actions remotely against target agent nodes via the PXP agent service.
+
+![Puppet server services](/assets/img/posts/2023-03-23-puppet-services.png)
+_Puppet services_
+
+# Run cycle
+
+1. *Connect to the primary server* : The agent node initiates a secure SSL connection to the primary server (TCP 8140).​
+2. *Inspect the system* : The agent node runs Facter (Puppet agent's built-in component) to inspect the current system state and gather facts, and then sends the facts to the primary server.​
+3. *Receive the catalog* : The agent node receives a catalog compiled by the primary server.
+4. ​​*Apply the catalog* : The agent node sends the TCP connection to the primary server, and then applies the catalog. The agent checks the current system state, and then applies the desired state according to the resources described in the catalog.
+5. *Send a report to the primary server* : The agent node sends a report to the primary server detailing changes to resources, specifying any changes that were intentional or corrective.
+
 # System prerequisites
 
 * Ensure time is in sync between Server and Agents. Issues with certificates can arise if there is time drifts.
@@ -41,7 +72,7 @@ There are two available Puppet distribution: Open Source Puppet, and Puppet Ente
 
 # Deployment
 
-## Puppet Server install
+## Puppet Server installation
 
 1. Download installer (URL may varies).
 
@@ -88,3 +119,18 @@ _Web console login_
 
 ![Puppet client server model](/assets/img/posts/2023-03-23-puppet-web-console.png)
 _Web console_
+
+
+## Puppet agent installation
+
+There are three methods for installing the Puppet agent: Local installation with the CLI using the agent installation script, Remote installation via the console with PE package management, and local installation via CLI using OS package management.
+
+# Puppet Server logging
+
+Puppet Server logs are located in `/var/log/puppetlabs/`.
+
+Puppet agent logs location varies depending of the operating system:
+
+| OS | Puppet agent Log | PXP agent |
+| Linux | /var/log/messages or /var/log/syslog  | /var/log/puppetlabs/pxp-agent/pxp-agent.log |
+| Windows | C:\ProgramData\PuppetLabs\puppet\var\log\puppet.log | C:\ProgramData\PuppetLabs\pxp-agent\var\log\pxp-agent.log |
