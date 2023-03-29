@@ -6,6 +6,8 @@ categories: [Coding]
 tags: [coding, git, cheatsheet]     # TAG names should always be lowercase
 ---
 
+This is a GIT cheatsheet to help remember the most common commands.
+
 # GIT command sheet
   
 ## Common commands
