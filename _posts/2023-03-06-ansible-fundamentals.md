@@ -3,9 +3,10 @@ layout: post
 title: Ansible Fundamentals
 date: 2023-03-06 23:06 +0100
 categories: [Systems, IaC]
-tags: [iac, ansible, cheatsheet]  
+tags: [iac, ansible]  
 ---
 
+Ansible is an open-source automation tool that simplifies the configuration management and deployment of software applications, infrastructure, and systems. It allows users to automate repetitive tasks and streamline complex workflows by using a simple, yet powerful language that enables the automation of entire IT environments.
 
 # Installing Ansible
 
@@ -49,16 +50,11 @@ tags: [iac, ansible, cheatsheet]
 
 # Inventory
 
-Is a list of hostname and IP addresses managed by Ansible
+Is a list of hostname and IP addresses managed by Ansible. 
 
-+ Useful for:
-  + Define groups
-  + ~~Set variables (not best approach)~~
+An inventory file can include information about each host, such as its IP address, hostname, and other variables that can be used to configure the host. This information can be used by Ansible to connect to the host and perform tasks on it.
 
-+ Types:
-  + __Static inventory__ : File with names or IP servers.
-  + __Dynamic inventory__ : Scripts that discover servers in a cloud environment.
-
+An inventory file can be **static** or **dynamic**. A static inventory file contains a list of hosts that is manually maintained by the user, while a dynamic inventory file is generated automatically by a script or program that queries a system or service to obtain the list of hosts.
 
 ##  Static inventory
 
@@ -107,6 +103,7 @@ Types of organizations can be:
 
 # Configuration files
 
+**ansible.cfg** is the configuration file used by Ansible to set various parameters and options for running Ansible playbooks and managing hosts. The file is located in the root of an Ansible project and contains a set of key-value pairs that define various configuration options.
 ## ansible.cfg example
 
 ```ini
@@ -131,6 +128,7 @@ become_ask_pass = False
 + become_method: hot to become the other user. sudo is the default.
 + become_user: target remote user.
 + become_ask_pass: if password should be asked for when escalating.
++ private_key_file: The path to the SSH private key file that Ansible will use to authenticate with the remote hosts.
 
 ## localhost
 
@@ -164,7 +162,7 @@ ansible [core 2.13.5]
 
 # Using AdHoc commands and ansible modules
 
-Execute a command agains a group of hosts.
+Execute a module agains a group of hosts.
 ```zsh
 ❯ ansible hosts -m module [-a 'mudule args'] [-i inventory]
 ```
