@@ -3,7 +3,7 @@ layout: post
 title: Zsh Resources
 date: 2023-06-25 22:00 +0100
 categories: [Systems]
-tags: [zsh, cheatsheet]  
+tags: [zsh, cheatsheet]
 ---
 
 # Themes
