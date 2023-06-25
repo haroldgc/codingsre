@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Puppet Fundamentals
+title: Puppet Enterprise Fundamentals
 date: 2023-03-23 22:42 +0100
 categories: [Systems, IaC]
 tags: [iac, puppet, cheatsheet]  
