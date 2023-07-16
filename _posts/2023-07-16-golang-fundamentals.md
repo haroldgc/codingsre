@@ -343,3 +343,4 @@ Go is a compiled language and statically typed, this makes Go faster than Python
 Python is dynamically typed, which makes Python easier to use than Go. Python is interpreted, also makes Python easier to use than Go. 
 Python is more mature than Go, and there is a larger community around Python with more libraries available.
 
+
