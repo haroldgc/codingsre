@@ -16,15 +16,6 @@ tags: [coding, programming, golang, go]
 + Open source: Go is open source.
 + Cross-platform: Go is cross-platform.
 
-# Main advantage of Go over Python
-
-Go is a compiled language and statically typed, this makes Go faster than Python at runtime, also more secure than Python at and easier to deploy than Python.
-
-# Main advantage of Python over Go
-
-Python is dynamically typed, which makes Python easier to use than Go. Python is interpreted, also makes Python easier to use than Go. 
-Python is more mature than Go, and there is a larger community around Python with more libraries available.
-
 # Go installation
 
 + Download the latest version of Go from the official website and extract the tarball into `/usr/local`:
@@ -341,4 +332,14 @@ func myFunc() {
 }
 ```
 
+# Go VS
+
+## Main advantage of Go over Python
+
+Go is a compiled language and statically typed, this makes Go faster than Python at runtime, also more secure than Python at and easier to deploy than Python.
+
+## Main advantage of Python over Go
+
+Python is dynamically typed, which makes Python easier to use than Go. Python is interpreted, also makes Python easier to use than Go. 
+Python is more mature than Go, and there is a larger community around Python with more libraries available.
 
