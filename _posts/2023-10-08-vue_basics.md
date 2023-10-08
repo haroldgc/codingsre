@@ -1,7 +1,7 @@
 ---
 layout: post
 title: VUE basics
-date: 2023-10-08 12:52 +0100
+date: 2023-10-08 12:52 +0200
 categories: [Coding]
 tags: [coding]     # TAG names should always be lowercase
 ---
