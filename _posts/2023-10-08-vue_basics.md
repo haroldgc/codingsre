@@ -1,3 +1,10 @@
+---
+layout: post
+title: VUE basics
+date: 2023-10-08 12:52 +0100
+categories: [Coding]
+tags: [coding]     # TAG names should always be lowercase
+---
 
 # Project creation
 
@@ -16,4 +23,3 @@ $ vue create vue-frontend
 $ cd vue-frontend
 $ npm run serve
 ```
-
